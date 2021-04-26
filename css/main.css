@@ -152,6 +152,8 @@ body {
   color: var(--accent-cl);
   flex-direction: column;
   justify-content: space-between;
+
+  position: relative;
 }
 
 .nav-active::after {
@@ -161,6 +163,8 @@ body {
   height: 4px;
   background: var(--accent-cl);
   border-radius: 2px;
+  position: absolute;
+  top: 50px;
 }
 
 .contacts .link {
