@@ -8,6 +8,7 @@
   --footer-link-cl: color rgba(255, 255, 255, 0.6);
   --icon-color: #afb1b8;
   --line-cl: #ececec;
+  --overlay-bg: rgba(33, 150, 243, 0.9);
 
   --main-font: 'Roboto', sans-serif;
   --logo-font: 'Raleway', sans-serif;
@@ -599,6 +600,38 @@ footer .logo {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--main-txt-cl);
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-overlay {
+  color: var(--main-cl);
+  background: var(--overlay-bg);
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  padding: 63px 24px;
+
+  transform: translateY(100%);
+}
+
+.portfolio-link:hover .portfolio-overlay,
+.portfolio-link:focus .portfolio-overlay {
+  opacity: 1;
+  transform: translateY(0);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: -cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover,
