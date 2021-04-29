@@ -13,6 +13,9 @@
 
   --main-font: 'Roboto', sans-serif;
   --logo-font: 'Raleway', sans-serif;
+
+  --time-transition: 250ms;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*
 text nav color, title text body: #212121;
@@ -147,6 +150,7 @@ body {
 .link {
   color: var(--title-cl);
   text-decoration: none; /*убираем подчеркивание ссылок*/
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-active {
@@ -247,6 +251,8 @@ span {
 
   margin-left: auto;
   margin-right: auto;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .content-hero .button:hover,
@@ -262,19 +268,33 @@ span {
   height: 100%;
   background-color: var(--modal-bg);
   z-index: 1;
+  opacity: 1;
+  transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
 
   width: 528px;
   height: 581px;
   background-color: var(--main-cl);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transition: transform, visibility 2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
@@ -289,6 +309,11 @@ span {
   border-radius: 50%;
 }
 
+.modal-close:hover,
+.modal-close:focus {
+  cursor: pointer;
+}
+
 .svg-close {
   position: absolute;
   top: 50%;
@@ -297,11 +322,6 @@ span {
 
   width: 11px;
   height: 11px;
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
 }
 
 /*класс, скрывающий элементы*/
@@ -315,6 +335,7 @@ span {
   width: 1px !important;
   overflow: hidden;
 }
+
 h2,
 h3 {
   color: var(--title-cl);
@@ -436,6 +457,7 @@ h2 {
   color: var(--icon-color);
   justify-content: center;
   align-items: center;
+  transition: background-color, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team .social-icons-link:hover,
@@ -472,6 +494,7 @@ h2 {
   box-sizing: border-box;
   border-radius: 4px;
   color: var(--icon-color);
+  transition: border-color, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -551,6 +574,7 @@ footer .logo {
 .join .social-icons-link {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--main-cl);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join .social-icons-link:hover,
@@ -570,6 +594,8 @@ footer .logo {
   border-radius: 4px;
   border-color: transparent;
   padding: 6px 22px;
+
+  transition: background-color, color, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover,
@@ -617,6 +643,7 @@ footer .logo {
 .btn-active {
   background-color: var(--accent-cl);
   color: var(--main-cl);
+  transition: background-color, color, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio {
@@ -644,6 +671,7 @@ footer .logo {
 .portfolio-link {
   display: block;
   text-decoration: none;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-text {
@@ -674,15 +702,15 @@ footer .logo {
   padding: 63px 24px;
 
   transform: translateY(100%);
+  transition-property: transform, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: -cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover .portfolio-overlay,
 .portfolio-link:focus .portfolio-overlay {
   opacity: 1;
   transform: translateY(0);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: -cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover,
