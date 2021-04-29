@@ -266,7 +266,7 @@ span {
   background-color: var(--modal-bg);
   z-index: 1;
   opacity: 1;
-  transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -291,10 +291,10 @@ span {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1), visibility 2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close {
+.btn-modal-close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -306,19 +306,16 @@ span {
   border-radius: 50%;
 }
 
-.modal-close:hover,
-.modal-close:focus {
+.btn-modal-close:hover,
+.btn-modal-close:focus {
   cursor: pointer;
 }
 
-.svg-close {
+.close-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  width: 11px;
-  height: 11px;
 }
 
 /*класс, скрывающий элементы*/
