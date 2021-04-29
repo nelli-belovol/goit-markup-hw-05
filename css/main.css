@@ -13,9 +13,6 @@
 
   --main-font: 'Roboto', sans-serif;
   --logo-font: 'Raleway', sans-serif;
-
-  --time-transition: 250ms;
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*
 text nav color, title text body: #212121;
@@ -139,7 +136,7 @@ body {
 }
 
 .contacts-icon {
-  stroke: currentColor;
+  fill: currentColor;
   margin-right: 10px;
 }
 
@@ -294,7 +291,7 @@ span {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transition: transform, visibility 2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1), visibility 2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
@@ -457,7 +454,7 @@ h2 {
   color: var(--icon-color);
   justify-content: center;
   align-items: center;
-  transition: background-color, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team .social-icons-link:hover,
@@ -494,7 +491,7 @@ h2 {
   box-sizing: border-box;
   border-radius: 4px;
   color: var(--icon-color);
-  transition: border-color, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -595,7 +592,8 @@ footer .logo {
   border-color: transparent;
   padding: 6px 22px;
 
-  transition: background-color, color, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover,
@@ -643,7 +641,8 @@ footer .logo {
 .btn-active {
   background-color: var(--accent-cl);
   color: var(--main-cl);
-  transition: background-color, color, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio {
@@ -702,9 +701,7 @@ footer .logo {
   padding: 63px 24px;
 
   transform: translateY(100%);
-  transition-property: transform, opacity;
-  transition-duration: 250ms;
-  transition-timing-function: -cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover .portfolio-overlay,
